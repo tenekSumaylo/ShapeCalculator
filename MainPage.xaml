@@ -3,39 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShapeCalculator.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <ContentPage.Resources>
+        <Style TargetType="Border">
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="WidthRequest" Value="200"/>
+            <Setter Property="HeightRequest" Value="200"/>
+        </Style>
+        
+        <Style TargetType="Border" x:Key="entryBorder">
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="HeightRequest" Value="30"/>
+            <Setter Property="WidthRequest" Value="150"/>
+        </Style>
+        
+        <Style TargetType="Entry">
+            <Setter Property="WidthRequest" Value="150"/>
+            <Setter Property="HeightRequest" Value="30"/>
+            <Setter Property="VerticalTextAlignment" Value="Start"/>
+            
+        </Style>
+        
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <ScrollView>
+        <HorizontalStackLayout VerticalOptions="Start">
+            <VerticalStackLayout VerticalOptions="Start"
+                                 Margin="50,50,50,0"
+                                 Spacing="25">
+                <Border>
+                </Border>
+                
+                <Border>
+                </Border>
+      
+                <Border>
+                </Border>
+            </VerticalStackLayout>
+            
+            <VerticalStackLayout Margin="50,30,50,5" Spacing="10">
+                <Label Text="Area"/>
+                <HorizontalStackLayout>
+                    <Label Text="Edge 1"/>
+                    <Border Style="{StaticResource entryBorder}">
+                        <Entry/>
+                    </Border>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Edge 2"/>
+                    <Border Style="{StaticResource entryBorder}">
+                        <Entry/>
+                    </Border>
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Result"/>
+                    <Border Style="{StaticResource entryBorder}">
+                        <Entry/>
+                    </Border>
+                </HorizontalStackLayout>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
     </ScrollView>
 
 </ContentPage>
