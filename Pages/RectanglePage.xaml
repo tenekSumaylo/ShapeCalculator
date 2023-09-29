@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShapeCalculator.Pages.RectanglePage"
+             Title="" Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Border">
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="WidthRequest" Value="200"/>
+            <Setter Property="HeightRequest" Value="200"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="entryBorder">
+            <Setter Property="Stroke" Value="Black"/>
+            <Setter Property="WidthRequest" Value="150"/>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="WidthRequest" Value="150"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Picker">
+            <Setter Property="BackgroundColor" Value="LightSlateGray"/>
+            <Setter Property="WidthRequest" Value="150"/>
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.MenuBarItems >
+        <MenuBarItem Text="Triangle"/>
+    </ContentPage.MenuBarItems>
+    <ScrollView>
+        <HorizontalStackLayout Spacing="30" HorizontalOptions="Center" Padding="50">
+            <VerticalStackLayout Spacing="25">
+                <Border >
+                    <Image Source="rectangle_area.png" Aspect="Fill"/>
+                </Border>
+
+                <Border>
+                    <Image Source="rectangle_perimeter.png" Aspect="Fill"/>
+                </Border>
+                <Border>
+                    <Image Source="rectangular_volume.png" Aspect="Fill"/>
+                </Border>
+            </VerticalStackLayout>
+            <!--paras picture ni-->
+
+            <VerticalStackLayout Spacing="0">
+                <VerticalStackLayout Spacing="5" Margin="0,0,0,129">
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Length"
+                               WidthRequest="100"/>
+                        <Border Style="{StaticResource entryBorder}">
+                            <Entry x:Name="txtLengthRecArea"/>
+                        </Border>
+                        <Picker x:Name="cboAreaRectangle"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Width"
+                               WidthRequest="100"/>
+                        <Border Style="{StaticResource entryBorder}">
+                            <Entry x:Name="txtWidthRecArea"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5" Margin="0,0,0,101">
+                    <Label Text="Result"/>
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Area"
+                               WidthRequest="100"/>
+                        <Border Style="{StaticResource entryBorder}">
+                            <Entry x:Name="txtAreaResult"/>
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Perimeter"
+                               WidthRequest="100"/>
+                        <Border Style="{StaticResource entryBorder}">
+                            <Entry x:Name="txtPerimeterResult"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Volume - Rectangular Tank"/>
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Length (l)"
+                               WidthRequest="100"/>
+                        <Border Style="{StaticResource entryBorder}">
+                            <Entry x:Name="txtLengthRec"/>
+                        </Border>
+                        <Picker x:Name="cboVolumeRec"/>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Width (w)"
+                               WidthRequest="100"/>
+                        <Border Style="{StaticResource entryBorder}">
+                            <Entry x:Name="txtWidthRec"/>
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout Spacing="5">
+                        <Label Text="Height (h)"
+                               WidthRequest="100"/>
+                        <Border Style="{StaticResource entryBorder}">
+                            <Entry x:Name="txtHeightRec"/>
+                        </Border>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+
+            </VerticalStackLayout>
+
+
+            <!--CENTER PIECE ^^^^-->
+
+            <!--RIGHT SIDE BELOW-->
+            <VerticalStackLayout Spacing="0">
+                <VerticalStackLayout Spacing="5" Margin="0,0,0,406">
+                    <HorizontalStackLayout>
+                        <Button Text="Calculate"
+                                x:Name="btnCalculateAreaRec"
+                                Clicked="btnCalculateAreaRec_Clicked"/>
+                        <Button Text="Clear"
+                                x:Name="btnClearAreaRec"
+                                Clicked="btnClearAreaRec_Clicked"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout Spacing="5" Margin="0,0,0,0">
+                    <Label Text="Result"/>
+                    <Border Style="{StaticResource entryBorder}">
+                        <Entry x:Name="txtVolumeResult"/>
+                    </Border>
+                    <HorizontalStackLayout>
+                        <Button Text="Calculate"
+                                x:Name="btnCalculateVol"
+                                Clicked="btnCalculateVol_Clicked"/>
+                        <Button Text="Clear"
+                                x:Name="btnClearVol"
+                                Clicked="btnClearVol_Clicked"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+    </ScrollView>
+</ContentPage>

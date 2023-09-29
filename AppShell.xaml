@@ -4,11 +4,26 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:ShapeCalculator"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    xmlns:local1="clr-namespace:ShapeCalculator.Pages"
+    Shell.NavBarIsVisible="False">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+    <TabBar>
+        <ShellContent Title="Triangle"
+                      Icon="triangle_icon.png"
+                      ContentTemplate="{DataTemplate local1:TrianglePage}"
+                      Route="TrianglePage"/>
+        <ShellContent Title="Rectangle"
+                      Icon="rectangle_icon.png"
+                      ContentTemplate="{DataTemplate local1:RectanglePage}"
+                      Route="RectanglePage"/>
+        <ShellContent Title="Square"
+                      Icon="square_icon.png"
+                      ContentTemplate="{DataTemplate local1:SquarePage}"
+                      Route="Square"/>
+        <ShellContent Title="Circle"
+                      Icon="circle_icon.png"
+                      ContentTemplate="{DataTemplate local1:CirclePage}"
+                      Route="CirclePage"/>
+    </TabBar>
 </Shell>

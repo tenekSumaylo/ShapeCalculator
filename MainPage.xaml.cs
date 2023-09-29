@@ -1,8 +1,9 @@
-﻿namespace ShapeCalculator
+﻿using ShapeCalculator.Pages;
+
+namespace ShapeCalculator
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {

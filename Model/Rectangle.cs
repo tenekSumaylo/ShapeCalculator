@@ -17,19 +17,13 @@ namespace ShapeCalculator.NewFolder
             Height = height;
         }
 
-        public override double Area()
-        {
-            return Length * Width;
-        }
+        public override double Area() => Math.Round( Length * Width, 2 );
+    
 
-        public override double Perimeter()
-        {
-            return (2 * Length) + (2 * Width);
-        }
+        public override double Perimeter() => Math.Round((2 * Length) + (2 * Width), 2 );
+     
 
-        public override double Volume()
-        {
-            return Length * Width * Height;
-        }
+        public override double Volume() => Math.Round( Length * Width * Height, 2 );
+      
     }
 }

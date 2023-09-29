@@ -10,32 +10,22 @@ namespace ShapeCalculator.NewFolder
     {
         public double Edge1 { get; set; } = 0;
         public double Edge2 { get; set; } = 0;
-        public double Edge3 { get; set; } = 0;
-        public double Radius { get; set; } 
+        public double Radius { get; set; } = 0;
 
         public Triangle() { }
 
         public Triangle( double edge1, double edge2, double edge3 ) {
             Edge1 = edge1;
             Edge2 = edge2;
-            Edge3 = edge3;
         }
 
-        public override double Area()
-        {
-            return (Edge1 * Edge2) / 2;
-        }
+        public override double Area() => Math.Round( ((Edge1 * Edge2) / 2), 2 );
+        
 
-        public override double Perimeter()
-        {
-            return Edge1 + Edge2 + Edge3;
-        }
+        public override double Perimeter() => Math.Round(Length + Width + Height, 2 );
+      
 
-        public override double Volume()
-        {
-            return ( 3.14 * Math.Pow( Radius, 2 ) * Height ) / 3;
-        }
-
-
+        public override double Volume() => Math.Round(( ( Math.PI * Math.Pow( Radius, 2 ) * Height ) / 3 ), 2);
+        
     }
 }

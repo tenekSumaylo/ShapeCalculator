@@ -1,72 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ShapeCalculator.MainPage">
+             x:Class="ShapeCalculator.MainPage"
+             Shell.NavBarIsVisible="False"
+             Title="">
 
-    <ContentPage.Resources>
-        <Style TargetType="Border">
-            <Setter Property="Stroke" Value="Black"/>
-            <Setter Property="WidthRequest" Value="200"/>
-            <Setter Property="HeightRequest" Value="200"/>
-        </Style>
-        
-        <Style TargetType="Border" x:Key="entryBorder">
-            <Setter Property="Stroke" Value="Black"/>
-            <Setter Property="HeightRequest" Value="30"/>
-            <Setter Property="WidthRequest" Value="150"/>
-        </Style>
-        
-        <Style TargetType="Entry">
-            <Setter Property="WidthRequest" Value="150"/>
-            <Setter Property="HeightRequest" Value="30"/>
-            <Setter Property="VerticalTextAlignment" Value="Start"/>
-            
-        </Style>
-        
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="VerticalTextAlignment" Value="Center"/>
-        </Style>
-    </ContentPage.Resources>
-
-        <ScrollView>
-        <HorizontalStackLayout VerticalOptions="Start">
-            <VerticalStackLayout VerticalOptions="Start"
-                                 Margin="50,50,50,0"
-                                 Spacing="25">
-                <Border>
-                </Border>
-                
-                <Border>
-                </Border>
-      
-                <Border>
-                </Border>
-            </VerticalStackLayout>
-            
-            <VerticalStackLayout Margin="50,30,50,5" Spacing="10">
-                <Label Text="Area"/>
-                <HorizontalStackLayout>
-                    <Label Text="Edge 1"/>
-                    <Border Style="{StaticResource entryBorder}">
-                        <Entry/>
-                    </Border>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout>
-                    <Label Text="Edge 2"/>
-                    <Border Style="{StaticResource entryBorder}">
-                        <Entry/>
-                    </Border>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout>
-                    <Label Text="Result"/>
-                    <Border Style="{StaticResource entryBorder}">
-                        <Entry/>
-                    </Border>
-                </HorizontalStackLayout>
-
-            </VerticalStackLayout>
-        </HorizontalStackLayout>
-    </ScrollView>
 
 </ContentPage>

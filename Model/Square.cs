@@ -8,20 +8,12 @@ namespace ShapeCalculator.NewFolder
 {
     public class Square : Shape
     {
+        public double Side { get; set; }
         public Square() { }
-        public override double Area()
-        {
-            throw new NotImplementedException();
-        }
+        public override double Area() => Math.Round( Math.Pow( Side, 2 ), 2 );
 
-        public override double Perimeter()
-        {
-            throw new NotImplementedException();
-        }
+        public override double Perimeter() => Math.Round(4 * Side, 2);
 
-        public override double Volume()
-        {
-            throw new NotImplementedException();
-        }
+        public override double Volume() => Math.Round(Math.Pow( Side, 3  ), 2);
     }
 }
